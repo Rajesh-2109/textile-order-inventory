@@ -44,6 +44,11 @@ const authLimiter = rateLimit({
   legacyHeaders: false,
   message: { message: "Too many attempts, try again later" },
 });
+
+app.get("/", (req, res) => {
+  res.json({ message: "API is running...!" });
+});
+
 app.use("/api/auth/login", authLimiter);
 app.use("/api/auth/register", authLimiter);
 
