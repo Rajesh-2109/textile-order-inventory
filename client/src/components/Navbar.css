@@ -1,0 +1,149 @@
+:root {
+  --toims-bg: #f4f8f7;
+  --toims-teal: #087e8b;
+  --toims-blue: #34495e;
+  --toims-hover: #d9f0ee;
+  --toims-orange: #e8793e;
+  --toims-white: #ffffff;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 76px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--toims-bg);
+  border-bottom: 1px solid #dceae7;
+  box-shadow: 0 3px 15px rgba(8, 126, 139, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--toims-teal);
+}
+
+.logo h2 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--toims-blue);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 15px;
+  border-radius: 9px;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--toims-teal);
+  background: var(--toims-hover);
+}
+
+.login-btn,
+.logout-btn {
+  border: none;
+  padding: 11px 23px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.login-btn {
+  background: var(--toims-teal);
+  color: var(--toims-white);
+}
+
+.login-btn:hover {
+  background: #066570;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background: var(--toims-orange);
+  color: var(--toims-white);
+}
+
+.logout-btn:hover {
+  background: #d7662d;
+  transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  border: none;
+  background: var(--toims-hover);
+  color: var(--toims-teal);
+  font-size: 25px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: var(--toims-white);
+    box-shadow: 0 10px 20px rgba(8, 126, 139, 0.12);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 13px 16px;
+  }
+
+  .nav-links .nav-extra {
+    display: block;
+  }
+
+  .login-btn,
+  .logout-btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a,
+  .login-btn,
+  .logout-btn {
+    transition: none;
+  }
+}

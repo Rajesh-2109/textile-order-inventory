@@ -1,0 +1,58 @@
+.process-page {
+  max-width: 1250px;
+}
+.process-kicker {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #a77c52;
+  font-weight: 800;
+}
+.page-head p {
+  color: #718087;
+  margin-top: -8px;
+}
+.process-form {
+  background: #fff;
+  border: 1px solid #e5eae7;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.process-form h3 {
+  margin: 0 0 16px;
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+.process-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #506168;
+  margin-bottom: 12px;
+}
+.process-form textarea {
+  min-height: 70px;
+}
+.process-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.process-page .table-wrap {
+  margin-top: 18px;
+}
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

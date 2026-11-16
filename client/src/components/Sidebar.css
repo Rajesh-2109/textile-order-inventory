@@ -1,0 +1,137 @@
+:root {
+  --toims-bg: #f4f8f7;
+  --toims-teal: #087e8b;
+  --toims-blue: #34495e;
+  --toims-hover: #d9f0ee;
+  --toims-orange: #e8793e;
+  --toims-white: #ffffff;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  height: auto;
+  min-height: calc(100vh - 64px);
+  padding: 25px 18px;
+  background: var(--toims-bg);
+  color: var(--toims-blue);
+  border-right: 1px solid #dceae7;
+  box-shadow: 3px 0 15px rgba(8, 126, 139, 0.06);
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+/* SIDEBAR HEADING */
+.sidebar h2 {
+  color: var(--toims-teal);
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+  display: block;
+  color: var(--toims-blue);
+  text-decoration: none;
+  margin-top: 12px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: var(--toims-hover);
+  color: var(--toims-teal);
+  transform: translateX(4px);
+}
+
+.sidebar a span {
+  margin-left: 8px;
+}
+
+/* COLLAPSED SIDEBAR */
+.sidebar.collapsed {
+  width: 80px;
+  padding: 25px 12px;
+}
+
+.sidebar.collapsed a {
+  text-align: center;
+  padding: 13px 8px;
+}
+
+.sidebar.collapsed a span {
+  display: none;
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--toims-hover);
+  color: var(--toims-teal);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--toims-teal);
+  color: var(--toims-white);
+}
+
+/* LOGOUT BUTTON */
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--toims-orange);
+  color: var(--toims-white);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sidebar-logout-btn:hover {
+  background: #d7662d;
+  transform: translateY(-2px);
+}
+
+/* COLLAPSED LOGOUT */
+.sidebar.collapsed .sidebar-logout-btn span {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    min-height: calc(100vh - 64px);
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar a,
+  .toggle-btn,
+  .sidebar-logout-btn {
+    transition: none;
+  }
+}
